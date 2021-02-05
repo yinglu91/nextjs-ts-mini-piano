@@ -1,15 +1,19 @@
+import  { useContext } from 'react';
+import { NoteContextProps, noteContext } from '../context/NoteContext';
 import styled from 'styled-components'
 
 interface NoteProps {
   note: string;
   color: string;
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Note: React.FC<NoteProps> = ({ note, color, handleClick }) => {
+const Note: React.FC<NoteProps> = ({ note, color}) => {
+  const { playNote } = useContext<NoteContextProps>(noteContext);
+  
   return (
     <>
-      {color === 'white' ? <White value={note} onClick={handleClick} /> : <Black value={note} onClick={handleClick} />}
+      {color === 'white' ?
+        <White value={note} onClick={playNote} /> : <Black value={note} onClick={playNote} />}
     </>
   )
 }

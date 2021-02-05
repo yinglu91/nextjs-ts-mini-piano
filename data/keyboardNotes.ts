@@ -3,7 +3,7 @@ export type KeyboardNote = {
   color: string;
 };
 
-export const keyboardNotes: KeyboardNote[] = [
+export const octame4Notes: KeyboardNote[] = [
   {
     note: 'C',
     color: 'white'

@@ -1,18 +1,17 @@
+import  { useContext } from 'react';
 import styled from 'styled-components'
-import { KeyboardNote } from '../data/keyboardNotes'
 import Note from './Note'
+import { NoteContextProps, noteContext } from '../context/NoteContext';
+import { KeyboardNote } from '../data/keyboardNotes'
 
-interface OctaveProps {
-  notes: KeyboardNote[];
-  handleClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
+const Octave: React.FC = () => {
+  const {keyboardNotes} = useContext<NoteContextProps>(noteContext);
 
-const Octave: React.FC<OctaveProps> = ({ notes, handleClick }) => {
   return (
     <Wrapper>
       <div>
-        {notes.map((element: KeyboardNote) => (
-          <Note key={element.note} note={element.note} color={element.color} handleClick={handleClick} />
+        {keyboardNotes.map((element: KeyboardNote) => (
+          <Note key={element.note} note={element.note} color={element.color} />
           ))}
         </div>
       </Wrapper>

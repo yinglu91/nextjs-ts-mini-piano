@@ -1,14 +1,13 @@
 import Head from 'next/head'
-import { keyboardNotes } from '../data/keyboardNotes'
 import Octave from '../components/Octave'
 import styles from '../styles/Home.module.css'
 
 const Home: React.FC = () => {
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-    console.log(event.currentTarget.value)
-    const audio = new Audio(`sounds/piano_${ event.currentTarget.value }.mp3`)
-    audio.play()
-  }
+  // const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  //   console.log(event.currentTarget.value)
+  //   const audio = new Audio(`sounds/piano_${ event.currentTarget.value }.mp3`)
+  //   audio.play()
+  // }
   return (
     <div className={styles.container}>
       <Head>
@@ -17,7 +16,7 @@ const Home: React.FC = () => {
       </Head>
       
       <div>
-        <Octave notes={keyboardNotes} handleClick={handleClick} />
+        <Octave />
       </div>
     </div>
   );
