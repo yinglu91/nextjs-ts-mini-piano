@@ -1,6 +1,6 @@
 import type { AppProps } from 'next/app'
+import NoteState from '../context/note/NoteState'
 import '../styles/globals.css'
-import NoteState from '../context/NoteContext'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -12,5 +12,3 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
 export default MyApp
 
-// https://www.youtube.com/watch?v=0NeuMVzmm1g  2/2/2021
-// Next JS Typescript Drum Pads | Next.js Drum Machine with Typescript

@@ -1,7 +1,4 @@
-export type KeyboardNote = {
-  note: string;
-  color: string;
-};
+import { KeyboardNote } from '../context/note/types';
 
 export const octame4Notes: KeyboardNote[] = [
   {

@@ -1,8 +1,8 @@
 import  { useContext } from 'react';
 import styled from 'styled-components'
 import Note from './Note'
-import { NoteContextProps, noteContext } from '../context/NoteContext';
-import { KeyboardNote } from '../data/keyboardNotes'
+import { KeyboardNote, NoteContextProps } from '../../context/note/types';
+import noteContext from '../../context/note/noteContext';
 
 const Octave: React.FC = () => {
   const {keyboardNotes} = useContext<NoteContextProps>(noteContext);

@@ -1,5 +1,6 @@
 import  { useContext } from 'react';
-import { NoteContextProps, noteContext } from '../context/NoteContext';
+import { NoteContextProps } from '../../context/note/types';
+import noteContext from '../../context/note/noteContext';
 import styled from 'styled-components'
 
 interface NoteProps {
