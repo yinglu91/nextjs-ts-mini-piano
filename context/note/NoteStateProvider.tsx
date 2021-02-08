@@ -7,7 +7,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-const NoteState: React.FC<Props> = ({ children }) => {
+const NoteStateProvider: React.FC<Props> = ({ children }) => {
   const [keyboardNotes, setKeyboardNotes] = useState<KeyboardNote[]>(octame4Notes)
 
   const playNote = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -23,4 +23,4 @@ const NoteState: React.FC<Props> = ({ children }) => {
   )
 }
 
-export default NoteState
+export default NoteStateProvider

@@ -1,12 +1,12 @@
 import type { AppProps } from 'next/app'
-import NoteState from '../context/note/NoteState'
+import NoteStateProvider from '../context/note/NoteStateProvider'
 import '../styles/globals.css'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <NoteState>
+    <NoteStateProvider>
       <Component {...pageProps} />
-    </NoteState>
+    </NoteStateProvider>
   )
 }
 
